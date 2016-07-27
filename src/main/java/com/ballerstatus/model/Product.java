@@ -15,7 +15,6 @@ public class Product {
     private String productDescription;
     private double productPrice;
     private int productInStock;
-    private long userId;
 
     public int getProductId() {
         return productId;
@@ -57,11 +56,4 @@ public class Product {
         this.productInStock = productInStock;
     }
 
-    public long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(long userId) {
-        this.userId = userId;
-    }
 }

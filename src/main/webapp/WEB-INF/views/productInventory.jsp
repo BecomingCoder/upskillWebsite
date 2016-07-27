@@ -5,9 +5,9 @@
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
-            <h1>Products</h1>
+            <h1>Product Inventory Page</h1>
 
-            <p class="lead">Come spend all your rent money here!</p>
+            <p class="lead">Check your stock here!</p>
         </div>
 
         <table class="table table-striped table-hover">
@@ -22,17 +22,19 @@
             </tr>
             </thead>
             <c:forEach items="${products}" var="product">
-            <tr>
-                <td><img src="#" alt="image" /></td>
-                <td>${product.productName}</td>
-                <td>${product.productDescription}</td>
-                <td>${product.productPrice} USD</td>
-                <td>${product.productInStock}</td>
-                <td><a href="<spring:url value="/products/viewProduct/${product.productId}" />"
-                ><span class="glyphicon glyphicon-info-sign"></span></a></td>
+                <tr>
+                    <td><img src="#" alt="image" /></td>
+                    <td>${product.productName}</td>
+                    <td>${product.productDescription}</td>
+                    <td>${product.productPrice} USD</td>
+                    <td>${product.productInStock}</td>
+                    <td><a href="<spring:url value="/products/viewProduct/${product.productId}" />"
+                    ><span class="glyphicon glyphicon-info-sign"></span></a></td>
 
-            </tr>
+                </tr>
             </c:forEach>
         </table>
+
+        <a href="<spring:url value="/admin/productInventory/addProduct"/>" class="btn btn-primary">Add Product</a>
 
 <%@include file="/WEB-INF/views/template/footer.jsp"%>

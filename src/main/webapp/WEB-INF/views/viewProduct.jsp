@@ -16,10 +16,10 @@
                 </div>
 
                 <div class="col-md-5">
-                    <h3>Product Name</h3>
-                    <p>Description</p>
-                    <p>Price</p>
-                    <p>Stock</p>
+                    <h3>Product Name : ${product.productName}</h3>
+                    <p>Description : ${product.productDescription}</p>
+                    <p>Price : ${product.productPrice}</p>
+                    <p><strong>In Stock</strong> : ${product.productInStock}</p>
                 </div>
             </div>
         </div>
