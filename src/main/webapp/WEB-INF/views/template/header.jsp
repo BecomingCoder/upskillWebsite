@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -37,8 +37,8 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li class="active"><a href="<c:url value="/" />">Home</a></li>
+                        <li><a href="<c:url value="/products" />">Products</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -60,53 +60,3 @@
 
     </div>
 </div>
-
-<div class="container-wrapper">
-    <div class="container">
-        <div class="page-header">
-            <h1>Products</h1>
-
-            <p class="lead">Come spend all you rent money here!</p>
-        </div>
-
-        <table class="table table-striped table-hover">
-            <thead>
-            <tr class="bg-success">
-                <th>Photo Thumb</th>
-                <th>Product Name</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Stock</th>
-            </tr>
-            </thead>
-            <c:forEach items="${products}" var="product">
-            <tr>
-                <td><img src="#" alt="image" /></td>
-                <td>${product.productName}</td>
-                <td>${product.productDescription}</td>
-                <td>${product.productPrice} USD</td>
-                <td>${product.productInStock}</td>
-
-            </tr>
-            </c:forEach>
-        </table>
-
-        <!-- FOOTER -->
-        <footer>
-            <p class="pull-right"><a href="#">Back to top</a></p>
-            <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-        </footer>
-
-    </div>
-
-</div><!-- /.container -->
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="<c:url value="/resources/js/jquery-3.1.0,min.js" />"><\/script>')</script>
-<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
-
-</body>
-</html>

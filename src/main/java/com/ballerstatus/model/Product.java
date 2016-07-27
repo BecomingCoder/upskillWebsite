@@ -1,19 +1,27 @@
 package com.ballerstatus.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Product {
 
-    private long productId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int productId;
     private String productName;
     private String productDescription;
     private double productPrice;
     private int productInStock;
     private long userId;
 
-    public long getProductId() {
+    public int getProductId() {
         return productId;
     }
 
-    public void setProductId(long productId) {
+    public void setProductId(int productId) {
         this.productId = productId;
     }
 
