@@ -7,6 +7,8 @@ public interface ProductDAO {
 
     void addProduct(Product product);
 
+    void editProduct(Product product);
+
     Product getProductById(Integer id);
 
     List<Product> getAllProducts();
